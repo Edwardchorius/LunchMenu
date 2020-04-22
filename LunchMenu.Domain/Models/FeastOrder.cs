@@ -6,7 +6,7 @@ using System.Text;
 namespace LunchMenu.Domain.Models
 {
     public class FeastOrder : BaseDataModel
-    {
+    { 
         public long CustomerId { get; set; }
         public ICollection<Feast> Feasts { get; set; }
     }

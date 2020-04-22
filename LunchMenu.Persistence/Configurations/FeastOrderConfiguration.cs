@@ -11,13 +11,6 @@ namespace LunchMenu.Persistence.Configurations
         public override void Configure(EntityTypeBuilder<FeastOrder> builder)
         {
             base.Configure(builder);
-
-            builder
-                .HasOne<Customer>()
-                .WithMany(x => x.FeastOrders)
-                .HasForeignKey(x => x.CustomerId);
-
-            builder.HasMany<Feast>();
         }
     }
 }

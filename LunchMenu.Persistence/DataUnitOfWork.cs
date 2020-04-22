@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LunchMenu.Persistence
 {
-    internal class DataUnitOfWork : IDataUnitOfWork
+    public class DataUnitOfWork : IDataUnitOfWork
     {
         private readonly LunchMenuDbContext _dbContext;
         public DataUnitOfWork(LunchMenuDbContext dbContext)

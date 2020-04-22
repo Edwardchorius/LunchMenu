@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchMenu.Persistence", "Lu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{50F5018C-21E8-4F08-85AA-79E01863AC2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchMenu.Web.IoC", "LunchMenu.Web.IoC\LunchMenu.Web.IoC.csproj", "{9956F098-7972-4F66-A738-E9B7A00FBBFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{F7370A6E-78D2-475A-8A18-29EF5BEBF7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7370A6E-78D2-475A-8A18-29EF5BEBF7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7370A6E-78D2-475A-8A18-29EF5BEBF7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9956F098-7972-4F66-A738-E9B7A00FBBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9956F098-7972-4F66-A738-E9B7A00FBBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9956F098-7972-4F66-A738-E9B7A00FBBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9956F098-7972-4F66-A738-E9B7A00FBBFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{5FABA9E5-806B-4C8B-907A-CC5CD9B247CD} = {586E721F-3681-4B28-8304-903B751C9A3C}
 		{67E3C44D-E7EE-4E08-846D-459BCB806388} = {586E721F-3681-4B28-8304-903B751C9A3C}
 		{F7370A6E-78D2-475A-8A18-29EF5BEBF7F9} = {63D9CA0F-28B8-44B0-A06F-257783995D9B}
+		{9956F098-7972-4F66-A738-E9B7A00FBBFB} = {80B6220B-1282-4D23-B8FB-5548D222A9AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2722294-F673-4EFA-AD89-6AFC88D40D89}

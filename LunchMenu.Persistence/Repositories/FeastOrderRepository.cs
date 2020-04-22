@@ -1,7 +1,9 @@
 ﻿using LunchMenu.Application.Interfaces.Repositories;
 using LunchMenu.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +38,11 @@ namespace LunchMenu.Persistence.Repositories
         }
 
         public Task<FeastOrder> GetAsync(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<FeastOrder>> GetByUsername(string username)
         {
             throw new NotImplementedException();
         }

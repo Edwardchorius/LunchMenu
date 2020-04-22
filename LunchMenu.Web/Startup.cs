@@ -1,14 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
-using LunchMenu.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -33,8 +27,7 @@ namespace LunchMenu.Web
             string dbConnectionString = Configuration.GetConnectionString("DefaultConnection");
             services.RegisterPersistenceDepenencies(dbConnectionString);
 
-            services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<LunchMenuDbContext>();
+            
 
             services.AddControllersWithViews();
         }
@@ -68,7 +61,6 @@ namespace LunchMenu.Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
             });
         }
     }

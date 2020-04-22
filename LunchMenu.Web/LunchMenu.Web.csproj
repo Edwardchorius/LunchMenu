@@ -2,12 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-LunchMenu.Web-B7A9FE49-2A76-4F05-BB85-E1A30704C928</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3" />
@@ -16,7 +14,11 @@
   <ItemGroup>
     <ProjectReference Include="..\LunchMenu.Application\LunchMenu.Application.csproj" />
     <ProjectReference Include="..\LunchMenu.Domain\LunchMenu.Domain.csproj" />
-    <ProjectReference Include="..\LunchMenu.Persistence\LunchMenu.Persistence.csproj" />
+    <ProjectReference Include="..\LunchMenu.Web.IoC\LunchMenu.Web.IoC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
   </ItemGroup>
 
 </Project>

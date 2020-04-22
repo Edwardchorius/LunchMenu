@@ -24,8 +24,8 @@ namespace LunchMenu.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(typeof(LunchMenuDbContext).Assembly);
+            base.OnModelCreating(builder);
         }
 
         public override async Task<int> SaveChangesAsync(

@@ -2,6 +2,7 @@
 using LunchMenu.Application.Interfaces.Repositories.Base;
 using LunchMenu.Domain.Models;
 using LunchMenu.Domain.Models.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,11 @@ namespace LunchMenu.Persistence.Repositories
         public Customer FindById(long id, bool isDeleted = false)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Customer> FindByUsername(string username)
+        {
+            return await _dbContext.Customers.FirstAsync(k => k.Username == username);
         }
 
         public Task<Customer> GetAsync(long id)
