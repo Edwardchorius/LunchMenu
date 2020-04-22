@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LunchMenu.Web.Middlewares;
 using LunchMenu.Persistence;
+using LunchMenu.Domain.Models;
 
 namespace LunchMenu.Web
 {
@@ -29,13 +30,10 @@ namespace LunchMenu.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<LunchMenuDbContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
             string dbConnectionString = Configuration.GetConnectionString("DefaultConnection");
             services.RegisterPersistenceDepenencies(dbConnectionString);
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<Customer>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<LunchMenuDbContext>();
 
             services.AddControllersWithViews();

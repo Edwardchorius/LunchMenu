@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LunchMenu.Application.Interfaces.Repositories.Base
 {
@@ -9,8 +10,10 @@ namespace LunchMenu.Application.Interfaces.Repositories.Base
     {
         IEnumerable<T> All();
 
-        void Add(T entity);
+        Task<T> AddAsync(T entity);
 
-        void Delete(T entity);
+        Task<T> DeleteAsync(T entity);
+        Task<T> GetAsync(long id);
+        T FindById(long id, bool isDeleted = false);
     }
 }

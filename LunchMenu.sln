@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchMenu.Domain", "LunchMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchMenu.Persistence", "LunchMenu.Persistence\LunchMenu.Persistence.csproj", "{F7370A6E-78D2-475A-8A18-29EF5BEBF7F9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{50F5018C-21E8-4F08-85AA-79E01863AC2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

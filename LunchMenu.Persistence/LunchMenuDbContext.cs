@@ -1,4 +1,5 @@
-﻿using LunchMenu.Domain.Models.Base;
+﻿using LunchMenu.Domain.Models;
+using LunchMenu.Domain.Models.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,14 @@ namespace LunchMenu.Persistence
 
         }
 
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Feast> Feasts { get; set; }
+        public DbSet<FeastOrder> FeastOrders { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            builder.ApplyConfigurationsFromAssembly(typeof(LunchMenuDbContext).Assembly);
         }
 
         public override async Task<int> SaveChangesAsync(
